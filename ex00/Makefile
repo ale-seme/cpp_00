@@ -1,35 +1,41 @@
 NAME = a.out
 
+CC = g++
+
 SRC = megaphone.cpp
 
 CFLAGS = -Wall -Werror -Wextra
 
 DIR_SRC = src
-
 DIR_OBJ = obj
 
-OBJ =
+# Full path to source files
+FILES_SRC := $(addprefix $(DIR_SRC)/, $(SRC))
 
-SRC := $(addprefix $(DIR_SRC)/, $(SCR))
+# Full path to object files
+OBJ := $(subst $(DIR_SRC)/, $(DIR_OBJ)/, $(FILES_SRC:.cpp=.o))
 
-OBJ := $(subst $(DIR_SRC)/, $(DIR_SRC), $(SRC:.cpp=.o))
-
-
+# Target to build the executable
 $(NAME): $(OBJ)
-	$(CC) -o  $(CFLAGS) $^ -o $@
+	$(CC) $(CFLAGS) $^ -o $@
 
+# Default target
 all: $(NAME)
 
-$(OBJ): $(DIR_OBJ)/%.o: $(DIR_SRC)/%.cpp
-	mkdir -p obj
+# Rule to compile source files into object files
+$(DIR_OBJ)/%.o: $(DIR_SRC)/%.cpp
+	mkdir -p $(DIR_OBJ)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-
+# Clean up object files and directories
 clean:
 	rm -rf $(DIR_OBJ)
+
+# Clean up everything including the executable
 fclean: clean
 	rm -rf $(NAME)
 
+# Rebuild everything
 re: fclean all
 
 .PHONY: all clean fclean re
