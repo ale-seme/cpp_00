@@ -1,18 +1,19 @@
-#include <iostream>
+#include "Contact.hpp"
+ 
+Contact::Contact(){};
 
-void	setFirstName(const std::string &newName)
-{
-	for(int)
+void	Contact::setFirstName(const std::string &newName){
+	_firstName = newName;
 }
-void	setLastName(const std::string &n){
-
+void	Contact::setLastName(const std::string &newLast){
+	_lastName = newLast;
 }
-void	setNickName(){
-
+void	Contact::setNickName(const std::string &newNick){
+	_nickName = newNick;
 }
-void	setPhoneNumber(){
-
+void	Contact::setPhoneNumber(const std::string &newPhoneNbr){
+	_phoneNumber = newPhoneNbr;
 }
-void	setDarkestSecret(){
-
+void	Contact::setDarkestSecret(const std::string &newSecret){
+	_darkestSecret = newSecret;
 }
