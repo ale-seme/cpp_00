@@ -1,10 +1,11 @@
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook(){};
+PhoneBook::PhoneBook() : index(0) {};
 
 void	PhoneBook::add(void){
 
-	//PhoneBook::contact_array[0];
+	Contact 	newContact;
+	newContact::
 }
 
 void	PhoneBook::search(int index){

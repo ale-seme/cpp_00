@@ -11,7 +11,6 @@ private:
     std::string _nickName;
     std::string _phoneNumber;
     std::string _darkestSecret;
-	int			_index;
 
 public:	
 			Contact();

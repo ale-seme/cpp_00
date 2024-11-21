@@ -1,12 +1,5 @@
 #include "PhoneBook.hpp"
 
-// Contact &fill_contact_information(std::string &input)
-// {
-// 	Contact NewContact;
-
-	
-
-// }
 
 int	main(void)
 {
