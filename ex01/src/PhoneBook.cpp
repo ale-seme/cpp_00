@@ -2,8 +2,9 @@
 
 PhoneBook::PhoneBook(){};
 
-void	PhoneBook::add(Contact &newContact){
-	PhoneBook::contact_array[0] = newContact;
+void	PhoneBook::add(void){
+
+	//PhoneBook::contact_array[0];
 }
 
 void	PhoneBook::search(int index){
