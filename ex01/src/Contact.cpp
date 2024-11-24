@@ -17,3 +17,23 @@ void	Contact::setPhoneNumber(const std::string &newPhoneNbr){
 void	Contact::setDarkestSecret(const std::string &newSecret){
 	_darkestSecret = newSecret;
 }
+
+std::string Contact::getFirstName() const{
+	return _firstName;
+}
+
+std::string Contact::getLastName() const{
+	return _lastName;
+}
+
+std::string Contact::getNickName() const{
+	return _nickName;
+}
+
+std::string Contact::getPhoneNumber() const{
+	return _phoneNumber;
+}
+
+std::string Contact::getDarkestSecret() const{
+	return _darkestSecret;
+}

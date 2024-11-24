@@ -13,8 +13,9 @@ private:
 public:
     PhoneBook();
 	void	add();
-	void	search(int index);
+	void	search();
 	void	exit();
+	void	printContacts();
 };
 
 #endif

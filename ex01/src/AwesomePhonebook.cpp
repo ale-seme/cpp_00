@@ -32,15 +32,18 @@ int	main(void)
 		}
 		else if (!input.compare("SEARCH"))
 		{
-			PhoneBook.search(0);//still need to figure if it's a good approach or not give an index at all
+			PhoneBook.search();//still need to figure if it's a good approach or not give an index at all
 		}
 		else if (!input.compare("EXIT"))
 		{
 			std::cout << "Exiting the program" << std::endl;
 			break;
 		}
+		else if (!input.compare("PRINT"))
+		{
+			PhoneBook.printContacts();
+		}
 		else
 			std::cout << "Only imput allowed are 'ADD', 'SEARCH', 'EXIT'" << std::endl;
 	}
-
 }

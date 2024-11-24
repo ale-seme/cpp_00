@@ -20,7 +20,13 @@ public:
 	void	setPhoneNumber(const std::string &newPhoneNbr);
 	void	setDarkestSecret(const std::string &newSecret);
 
-	const std::string &getFirstName() const;
+	std::string getFirstName() const;
+	std::string getLastName() const;
+	std::string getNickName() const;
+	std::string getPhoneNumber() const;
+	std::string getDarkestSecret() const;
+	
+	//const std::string &getFirstName() const;
 };
 
 #endif
