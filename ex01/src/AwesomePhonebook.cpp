@@ -5,11 +5,10 @@ int	main(void)
 {
 	std::string input;
 	PhoneBook PhoneBook;
-	//display some message herejust for the beginning
+	std::cout << "Please enter a command between: 'ADD', 'SEARCH', 'EXIT" << std::endl;
 	while(1)
 	{
-		//std::cin.get();
-		input = get_input("Please enter a valid input between 'ADD', 'SEARCH', 'EXIT\n");
+		input = get_input(">");
 		if (!input.compare("ADD"))
 		{
 			PhoneBook.add();
@@ -27,6 +26,8 @@ int	main(void)
 			std::cout << "Exiting the program" << std::endl;
 			break;
 		}
+		else
+			std::cout << "Wrong input. Allowed commands: 'ADD', 'SEARCH', 'EXIT'" << std::endl;
 	}
 	return (0);
 }

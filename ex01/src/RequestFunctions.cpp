@@ -3,7 +3,6 @@
 std::string get_input(std::string request_message)
 {
     std::string input;
-    
     while(1)
     {
         std::cout << request_message << std::flush;
@@ -12,12 +11,12 @@ std::string get_input(std::string request_message)
             if ((std::cin.eof)())
             {
                 std::cout << "End of input detected. Exiting the rogram" << std:: endl;
-                return NULL;
+                std::exit(1);
             }
             else
             {
                 std::cout << "Error with getline funciton. Exiting the program" << std::endl;
-                return NULL;
+                std::exit(0);
             }
         }
         if (input.empty())
