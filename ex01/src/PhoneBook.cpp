@@ -5,25 +5,24 @@ PhoneBook::PhoneBook() : index(0) {};
 void	PhoneBook::add(void){
 
 	std::string input;
-	std::cout << "Please insert the first name of your contact" << std::endl;
-	std::cin >> input;
+	Contact NewContact;
+
+
+	// input = get_input("Please insert the first name of your contact");
+	input = get_input("First Name: ");
+
 	PhoneBook::contact_array[0].setFirstName(input);
 
-	std::cout << "Please insert the last name of your contact" << std::endl;
-	std::cin >> input;
+	input = get_input("Last Name: ");
 	PhoneBook::contact_array[0].setLastName(input);
 
-
-	std::cout << "Please insert the nick name of your contact" << std::endl;
-	std::cin >> input;
+	input = get_input("Nick Name: ");
 	PhoneBook::contact_array[0].setNickName(input);
 
-	std::cout << "Please insert the phone number of your contact" << std::endl;
-	std::cin >> input;
+	input = get_input ("Phone Number: ");
 	PhoneBook::contact_array[0].setPhoneNumber(input);
 
-	std::cout << "Please inser the darkest secret of your contact" << std::endl;
-	std::cin >> input;
+	input = get_input("Darkest Secret: ");
 	PhoneBook::contact_array[0].setDarkestSecret(input);
 }
 

@@ -4,7 +4,7 @@ CC = g++
 
 INCLUDES = -I./include
 
-SRC = AwesomePhonebook.cpp PhoneBook.cpp Contact.cpp
+SRC = AwesomePhonebook.cpp PhoneBook.cpp Contact.cpp RequestFunctions.cpp
 
 CFLAGS = -Wall -Werror -Wextra -g
 

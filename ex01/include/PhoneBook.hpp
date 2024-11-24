@@ -2,6 +2,7 @@
 #define PHONEBOOK_HPP
 
 #include "Contact.hpp"
+#include "RequestFunctions.hpp"
 
 //i still need to have include guards and implement the methods in a separate file
 
