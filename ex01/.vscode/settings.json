@@ -47,6 +47,8 @@
 		"typeinfo": "cpp",
 		"ranges": "cpp",
 		"span": "cpp",
-		"iomanip": "cpp"
+		"iomanip": "cpp",
+		"ctime": "cpp",
+		"sstream": "cpp"
 	}
 }

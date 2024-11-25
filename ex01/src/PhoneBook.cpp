@@ -20,7 +20,7 @@ void	PhoneBook::search(){
 	std::cout << std::setw(10) << "Last Name" << "|";
 	std::cout << std::setw(10) << "Nick Name" << "|";
 	std::cout << std::setw(10) << "Phone Number" << "|";
-	std::cout << std::setw(10) << "Darkest Secret" << std::endl;
+	std::cout << std::setw(10) << "Darkest Secret" << "|" << std::endl; //not sure about the last pipe
 	std::cout << "-------------------------------------------------------------"\
 	<< std::endl;
 
@@ -35,11 +35,16 @@ void	PhoneBook::search(){
 		std::cout << std::setw(10) << truncate(contact.getDarkestSecret()) << std::endl;
 		i++;
 	}
-	// std::string input;
-	// input = get_input("Please input a valid inxed to search range 1-9");
-	// if (input.length() > 1)
-		cout << "invalid index";
-}//
+	std::cout << "-------------------------------------------------------------"\
+	<< std::endl; 
+	//FROM HERE
+	std::string input = get_input("Please input a valid index to display contact informaiton\n");
+	if (input.length() > 1 || input == "0" || std::stoi(input) > index)
+	{
+		std::cout << "invalid index detexted, exiting search mode" << std::endl;
+	}
+	
+}
 
 std::string PhoneBook::truncate(const std::string &str) const{
 	if (str.length() > 10)
