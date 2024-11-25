@@ -13,10 +13,10 @@ private:
 
 public:
     PhoneBook();
-	void	add();
-	void	search();
-	void	exit();
-	void	printContacts();
+	void		add();
+	void		search();
+	void		exit();
+	std::string	truncate(const std::string &str) const;
 };
 
 #endif

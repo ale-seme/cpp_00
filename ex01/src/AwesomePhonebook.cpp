@@ -17,10 +17,6 @@ int	main(void)
 		{
 			PhoneBook.search();
 		}
-		else if (!input.compare("PRINT"))
-		{
-			PhoneBook.printContacts();
-		}
 		else if (!input.compare("EXIT"))
 		{
 			std::cout << "Exiting the program" << std::endl;
