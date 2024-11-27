@@ -26,6 +26,7 @@ public:
 	std::string getPhoneNumber() const;
 	std::string getDarkestSecret() const;
 	void	inputContactDetails();
+	void	displayContactInfo();
 	//const std::string &getFirstName() const;
 };
 

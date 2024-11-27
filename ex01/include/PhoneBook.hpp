@@ -16,6 +16,7 @@ public:
 	void		add();
 	void		search();
 	void		exit();
+	void		displayContactInfo(int i);
 	std::string	truncate(const std::string &str) const;
 };
 
