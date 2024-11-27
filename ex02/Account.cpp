@@ -1,4 +1,6 @@
 #include "Account.hpp"
+#include <iostream>
+
 
 int Account::getNbAccounts( void ){
 	return	_nbAccounts;
@@ -17,5 +19,8 @@ int Account::getNbWithdrawals( void ){
 }
 
 void	Account::displayAccountsInfos( void ){
-	
+	std::cout << "accounts:" << getNbAccounts() << ";";
+	std::cout << "total:" << getTotalAmount() << ";";
+	std::cout << "deposits:" << getNbDeposits() << ";";
+	std::cout << "withdrawals" << getNbWithdrawals() << std::endl;
 }
