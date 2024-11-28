@@ -1,10 +1,10 @@
-NAME = phonebook
+NAME = a.out
 
 CC = g++
 
-INCLUDES = -I./include
+INCLUDES = -I./Account.hpp
 
-SRC = AwesomePhonebook.cpp PhoneBook.cpp Contact.cpp RequestFunctions.cpp
+SRC = Account.cpp test.cpp
 
 CFLAGS = -Wall -Werror -Wextra -g
 
