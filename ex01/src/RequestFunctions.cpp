@@ -10,7 +10,7 @@ std::string get_input(std::string request_message)
         {
             if ((std::cin.eof)())
             {
-                std::cout << "End of input detected. Exiting the rogram" << std:: endl;
+                std::cout << "End of input detected. Exiting the program" << std:: endl;
                 std::exit(1);
             }
             else
