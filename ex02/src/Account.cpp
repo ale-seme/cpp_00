@@ -3,19 +3,20 @@
 #include <ctime>
 #include <iomanip>
 
+//diff -s <(cut -c 18- first.log) <(cut -c 18- 2nd.log)
 int Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
-Account::Account( int initial_deposit ) : _amount(initial_deposit){
-	_nbAccounts += 1;
-	_totalAmount += initial_deposit;
-	_accountIndex = _nbAccounts - 1;
-	_amount = initial_deposit;
-	_nbDeposits = 0;
-	_nbWithdrawals = 0;
-	_displayTimestamp();
+Account::Account( int initial_deposit ):
+	_accountIndex(_nbAccounts),
+	_amount(initial_deposit),
+	_nbDeposits(0),
+	_nbWithdrawals(0){
+		_nbAccounts += 1;
+		_totalAmount += initial_deposit;
+		_displayTimestamp();
 	std::cout << "index:" << _accountIndex << ";amount:" << _amount 
 	<< ";created" << std::endl;
 }
@@ -49,8 +50,7 @@ void Account::makeDeposit( int deposit ){
 	_amount += deposit;
 	_totalNbDeposits += 1;
 	_nbDeposits += 1;
-	_totalAmount += deposit; //can the total amount be more than MAX INT
-	//do something before to check for overflow;
+	_totalAmount += deposit;
 	std::cout<<";amount:" << _amount << ";nb_deposits:" << _nbDeposits << std::endl;
 }
 
@@ -84,7 +84,6 @@ void Account::displayStatus( void ) const{
 void	Account::displayAccountsInfos( void ){
 	
 	_displayTimestamp();
-	//OR ALSO GOOD MAYBE
 	std::cout << "accounts:" << getNbAccounts() << ";"
 	<< "total:" << getTotalAmount() << ";"
 	<< "deposits:" << getNbDeposits() << ";"
