@@ -2,9 +2,9 @@ NAME = a.out
 
 CC = g++
 
-INCLUDES = -I./Account.hpp
+INCLUDES = -I./include
 
-SRC = Account.cpp test.cpp
+SRC = Account.cpp tests.cpp
 
 CFLAGS = -Wall -Werror -Wextra -g
 
