@@ -1,4 +1,4 @@
-NAME = a.out
+NAME = account
 
 CC = g++
 
@@ -6,7 +6,7 @@ INCLUDES = -I./include
 
 SRC = Account.cpp tests.cpp
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -std=c++11
 
 DIR_SRC = src
 DIR_OBJ = obj
