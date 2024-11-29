@@ -1,10 +1,10 @@
-NAME = a.out
+NAME = megaphone
 
 CC = g++
 
 SRC = megaphone.cpp
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -std=c++11
 
 DIR_SRC = src
 DIR_OBJ = obj

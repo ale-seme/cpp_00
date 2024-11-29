@@ -6,7 +6,7 @@ INCLUDES = -I./include
 
 SRC = AwesomePhonebook.cpp PhoneBook.cpp Contact.cpp RequestFunctions.cpp
 
-CFLAGS = -Wall -Werror -Wextra -g
+CFLAGS = -Wall -Werror -Wextra -std=c++11
 
 DIR_SRC = src
 DIR_OBJ = obj
