@@ -1,11 +1,10 @@
 #include "PhoneBook.hpp"
 
-
 int	main(void)
 {
 	std::string input;
 	PhoneBook PhoneBook;
-	std::cout << "Please enter a command between: 'ADD', 'SEARCH', 'EXIT" << std::endl;
+	std::cout << "Please enter a command between: 'ADD', 'SEARCH', 'EXIT'" << std::endl;
 	while(1)
 	{
 		input = get_input(">");

@@ -14,20 +14,12 @@ private:
 
 public:	
 			Contact();
-	// void	setFirstName(const std::string &newName);
-	// void	setLastName(const std::string &newLast);
-	// void	setNickName(const std::string &newNick);
-	// void	setPhoneNumber(const std::string &newPhoneNbr);
-	// void	setDarkestSecret(const std::string &newSecret);
-
 	std::string getFirstName() const;
 	std::string getLastName() const;
 	std::string getNickName() const;
 	std::string getPhoneNumber() const;
 	std::string getDarkestSecret() const;
-	void	inputContactDetails();
-	void	displayContactInfo();
-	//const std::string &getFirstName() const;
+	void		inputContactDetails();
 };
 
 #endif

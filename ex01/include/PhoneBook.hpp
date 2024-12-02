@@ -4,8 +4,6 @@
 #include "Contact.hpp"
 #include "RequestFunctions.hpp"
 
-//i still need to have include guards and implement the methods in a separate file
-
 class PhoneBook{
 private:
     Contact	contact_array[8];
@@ -15,7 +13,6 @@ public:
     PhoneBook();
 	void		add();
 	void		search();
-	void		exit();
 	void		displayContactInfo(int i);
 	std::string	truncate(const std::string &str) const;
 };

@@ -11,12 +11,12 @@ std::string get_input(std::string request_message)
             if ((std::cin.eof)())
             {
                 std::cout << "End of input detected. Exiting the program" << std:: endl;
-                std::exit(1);
+                std::exit(0);
             }
             else
             {
                 std::cout << "Error with getline funciton. Exiting the program" << std::endl;
-                std::exit(0);
+                std::exit(1);
             }
         }
         if (input.empty())

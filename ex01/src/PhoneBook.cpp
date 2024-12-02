@@ -9,8 +9,6 @@ void	PhoneBook::add(void){
 	NewContact.inputContactDetails();
 	contact_array[index] = NewContact;
 	index = (index + 1) % 8;
-	// input = get_input("Please insert the first name of your contact");
-
 }
 
 void	PhoneBook::search(){
@@ -31,14 +29,19 @@ void	PhoneBook::search(){
 		i++;
 	}
 	std::cout << "---------------------------------------------" << std::endl; 
-	//FROM HERE
 	std::string input = get_input("Please input a valid index (1-8) to display contact informaiton\n");
-	if (input.length() > 1 || input == "0" || std::stoi(input) > 8)
-	{
-		std::cout << "invalid index detexted, exiting search mode" << std::endl;	
-		return ;
+	try {
+		int index = std::stoi(input);
+		if (index < 1 || index > 8) {
+			std::cout << "Invalid index detected, exiting search mode" << std::endl;
+			return;
+		}
+		displayContactInfo(index);
+	} catch (const std::invalid_argument&) {
+		std::cout << "Invalid input detected (not a number), exiting search mode" << std::endl;
+	} catch (const std::out_of_range&) {
+		std::cout << "Input out of range, exiting search mode" << std::endl;
 	}
-	displayContactInfo(std::stoi(input));
 }
 
 std::string PhoneBook::truncate(const std::string &str) const{
@@ -57,11 +60,4 @@ void PhoneBook::displayContactInfo(int i){
 	std::cout << "Phone Number: " << contact_array[i - 1].getPhoneNumber() << std::endl;
 	std::cout << "Darkest Secret: " << contact_array[i - 1].getDarkestSecret() << std::endl;
 	std::cout << "SEARCH COMPLETED, EXITING SEARCH MODE" << std::endl;
-}
-
-
-
-
-void	PhoneBook::exit(){
-	//exit();
 }
